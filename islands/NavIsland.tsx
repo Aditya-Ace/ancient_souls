@@ -2,6 +2,7 @@ import { JSX } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
 import { IS_BROWSER } from '$fresh/runtime.ts';
 import { Button } from '../components/ui/Button.tsx';
+import { LinkButton } from '../components/ui/LinkButton.tsx';
 
 export function NavIsland() {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -55,16 +56,16 @@ export function NavIsland() {
 						<NavLink href='/contact' isScrolled={isScrolled}>
 							Contact
 						</NavLink>
-						<Button
-							onClick={() => alert('Join functionality to be implemented')}
+						<LinkButton
+							href='/join'
 							class={`ml-4 transition-all duration-300 ${
 								isScrolled
 									? 'bg-blue-500 hover:bg-blue-600 text-white'
-									: 'bg-white hover:bg-gray-100 text-blue-500'
+									: 'bg-grey-500 hover:bg-gray-100 text-blue-500'
 							}`}
 						>
 							Join Now
-						</Button>
+						</LinkButton>
 					</div>
 					<div class='md:hidden'>
 						<button

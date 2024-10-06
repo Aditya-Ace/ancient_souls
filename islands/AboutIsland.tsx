@@ -12,7 +12,7 @@ export default function AboutIsland() {
 	};
 
 	return (
-		<Card>
+		<Card class='mt-7'>
 			<p class='text-gray-600 mb-6 text-lg'>
 				Ancient Souls is a passionate community of gamers dedicated to sharing
 				and discovering the best gaming experiences across all platforms.
@@ -46,10 +46,12 @@ export default function AboutIsland() {
 				for you at Ancient Souls. Join our community today and start sharing
 				your gaming journey with fellow souls!
 			</p>
-			<Button onClick={handleJoinClick} class='text-lg py-3 px-6'>
+			<Button
+				onClick={handleJoinClick}
+				class='bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out'
+			>
 				Join Ancient Souls
 			</Button>
-
 			<Modal isOpen={isDialogOpen} onClose={() => setIsDialogOpen(false)}>
 				<JoinForm />
 			</Modal>

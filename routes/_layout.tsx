@@ -13,13 +13,13 @@ export default function Layout({ Component }: PageProps) {
 					content='Share and discover game recommendations for PC, PlayStation, Xbox, Nintendo Switch, Android, iOS, and Mac'
 				/>
 			</Head>
-			<div class='flex flex-col min-h-screen bg-gray-100'>
+			<main class='flex flex-col min-h-screen bg-gray-900'>
 				<NavIsland />
-				<main class='flex-grow'>
+				<div class='flex-grow'>
 					<Component />
-				</main>
+				</div>
 				<FooterIsland />
-			</div>
+			</main>
 		</>
 	);
 }

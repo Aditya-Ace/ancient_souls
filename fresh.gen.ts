@@ -8,6 +8,7 @@ import * as $_layout from "./routes/_layout.tsx";
 import * as $about from "./routes/about.tsx";
 import * as $contact from "./routes/contact.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $join from "./routes/join.tsx";
 import * as $AboutIsland from "./islands/AboutIsland.tsx";
 import * as $FooterIsland from "./islands/FooterIsland.tsx";
 import * as $HomeIsland from "./islands/HomeIsland.tsx";
@@ -23,6 +24,7 @@ const manifest = {
     "./routes/about.tsx": $about,
     "./routes/contact.tsx": $contact,
     "./routes/index.tsx": $index,
+    "./routes/join.tsx": $join,
   },
   islands: {
     "./islands/AboutIsland.tsx": $AboutIsland,

@@ -12,7 +12,7 @@ export default function Home() {
 					content='Join Ancient Souls and share your game recommendations with a community of passionate gamers.'
 				/>
 			</Head>
-			<div class='bg-gray-900 text-white'>
+			<div class='text-white'>
 				<section class='relative'>
 					<div class='absolute inset-0 bg-black opacity-60 z-10'></div>
 					<div class='container mx-auto px-6 py-32 relative z-20'>
@@ -57,7 +57,7 @@ export default function Home() {
 				</div>
 			</section>
 			<section class='container mx-auto px-6 py-16'>
-				<h2 class='text-3xl font-bold text-center text-gray-800 mb-8'>
+				<h2 class='text-3xl font-bold text-center text-white mb-8'>
 					How It Works
 				</h2>
 				<div class='grid md:grid-cols-3 gap-8'>

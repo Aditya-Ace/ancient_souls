@@ -1,7 +1,6 @@
 export default function Contact() {
 	return (
-		<div class='container mx-auto px-6 py-8'>
-			<h1 class='text-4xl font-bold text-gray-800 mb-6'>Contact Us</h1>
+		<div class='container mx-auto px-6 py-8 mt-14'>
 			<div class='bg-white rounded-lg shadow-md p-8'>
 				<p class='text-gray-600 mb-6 text-lg'>
 					Have questions or suggestions? We'd love to hear from you! Get in

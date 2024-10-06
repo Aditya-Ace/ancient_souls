@@ -17,7 +17,11 @@ const gameGenres = [
 	'Horror'
 ];
 
-export default function JoinForm() {
+interface JoinFormProps {
+	additionalClasses?: string;
+}
+
+export default function JoinForm(props: JoinFormProps) {
 	const [email, setEmail] = useState('');
 	const [username, setUsername] = useState('');
 	const [password, setPassword] = useState('');
@@ -36,7 +40,7 @@ export default function JoinForm() {
 	};
 
 	return (
-		<Card>
+		<Card class={props.additionalClasses}>
 			<h2 class='text-2xl font-bold mb-6 text-center'>Join Ancient Souls</h2>
 			<form onSubmit={handleSubmit} class='space-y-4'>
 				<Input
