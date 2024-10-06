@@ -1,7 +1,7 @@
 import { PageProps } from '$fresh/server.ts';
 import { Head } from '$fresh/runtime.ts';
-import { Nav } from '../components/Nav.tsx';
-import { Footer } from '../components/Footer.tsx';
+import { NavIsland } from '../islands/NavIsland.tsx';
+import { FooterIsland } from '../islands/FooterIsland.tsx';
 
 export default function Layout({ Component }: PageProps) {
 	return (
@@ -14,11 +14,11 @@ export default function Layout({ Component }: PageProps) {
 				/>
 			</Head>
 			<div class='flex flex-col min-h-screen bg-gray-100'>
-				<Nav />
+				<NavIsland />
 				<main class='flex-grow'>
 					<Component />
 				</main>
-				<Footer />
+				<FooterIsland />
 			</div>
 		</>
 	);

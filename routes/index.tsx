@@ -1,31 +1,43 @@
 import { JSX } from 'preact/jsx-runtime';
+import { Head } from '$fresh/runtime.ts';
+import { HomeIsland } from '../islands/HomeIsland.tsx';
 
 export default function Home() {
 	return (
 		<>
-			<section class='container mx-auto px-6 py-16'>
-				<div class='flex flex-col md:flex-row items-center'>
-					<div class='md:w-1/2 mb-8 md:mb-0'>
-						<h1 class='text-4xl md:text-6xl font-bold text-gray-800 mb-4'>
-							Discover Your Next Favorite Game
-						</h1>
-						<p class='text-xl text-gray-600 mb-8'>
-							Join Ancient Souls and share your game recommendations with a
-							community of passionate gamers.
-						</p>
-						<button class='bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out'>
-							Start Exploring
-						</button>
+			<Head>
+				<title>Ancient Souls - Discover Your Next Favorite Game</title>
+				<meta
+					name='description'
+					content='Join Ancient Souls and share your game recommendations with a community of passionate gamers.'
+				/>
+			</Head>
+			<div class='bg-gray-900 text-white'>
+				<section class='relative'>
+					<div class='absolute inset-0 bg-black opacity-60 z-10'></div>
+					<div class='container mx-auto px-6 py-32 relative z-20'>
+						<div class='flex flex-col md:flex-row items-center gap-4'>
+							<div class='md:w-1/2 mb-8 md:mb-0'>
+								<h1 class='text-4xl md:text-6xl font-bold mb-4'>
+									Discover Your Next Favorite Game
+								</h1>
+								<p class='text-xl mb-8'>
+									Join Ancient Souls and share your game recommendations with a
+									community of passionate gamers.
+								</p>
+								<HomeIsland />
+							</div>
+							<div class='md:w-1/2'>
+								<img
+									src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80'
+									alt='Gaming Setup'
+									class='w-full h-auto rounded-lg shadow-lg'
+								/>
+							</div>
+						</div>
 					</div>
-					<div class='md:w-1/2'>
-						<img
-							src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80'
-							alt='Gaming Setup'
-							class='w-full h-auto rounded-lg shadow-lg'
-						/>
-					</div>
-				</div>
-			</section>
+				</section>
+			</div>
 			<section class='bg-white py-16'>
 				<div class='container mx-auto px-6'>
 					<h2 class='text-3xl font-bold text-center text-gray-800 mb-8'>
@@ -66,6 +78,7 @@ export default function Home() {
 		</>
 	);
 }
+
 function PlatformCard({ icon, name }: { icon: JSX.Element; name: string }) {
 	return (
 		<div class='flex flex-col items-center'>
@@ -74,6 +87,7 @@ function PlatformCard({ icon, name }: { icon: JSX.Element; name: string }) {
 		</div>
 	);
 }
+
 function FeatureCard({
 	title,
 	description
@@ -88,6 +102,7 @@ function FeatureCard({
 		</div>
 	);
 }
+
 function SteamIcon() {
 	return (
 		<svg
@@ -106,6 +121,7 @@ function SteamIcon() {
 		</svg>
 	);
 }
+
 function PlayStationIcon() {
 	return (
 		<svg
@@ -124,6 +140,7 @@ function PlayStationIcon() {
 		</svg>
 	);
 }
+
 function XboxIcon() {
 	return (
 		<svg
@@ -143,6 +160,7 @@ function XboxIcon() {
 		</svg>
 	);
 }
+
 function NintendoSwitchIcon() {
 	return (
 		<svg
@@ -163,6 +181,7 @@ function NintendoSwitchIcon() {
 		</svg>
 	);
 }
+
 function MobileIcon() {
 	return (
 		<svg
@@ -182,6 +201,7 @@ function MobileIcon() {
 		</svg>
 	);
 }
+
 function AppleIcon() {
 	return (
 		<svg

@@ -1,5 +1,7 @@
 export default function About() {
-	const handleJoin = () => {};
+	const handleJoin = () => {
+		console.log('Joining Ancient Souls');
+	};
 	return (
 		<div class='container mx-auto px-6 py-8'>
 			<h1 class='text-4xl font-bold text-gray-800 mb-6'>About Ancient Souls</h1>

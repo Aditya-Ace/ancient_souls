@@ -1,4 +1,4 @@
-export function Footer() {
+export function FooterIsland() {
 	return (
 		<footer class='bg-gray-800 text-white py-12'>
 			<div class='container mx-auto px-6'>

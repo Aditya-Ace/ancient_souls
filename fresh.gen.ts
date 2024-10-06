@@ -8,7 +8,11 @@ import * as $_layout from "./routes/_layout.tsx";
 import * as $about from "./routes/about.tsx";
 import * as $contact from "./routes/contact.tsx";
 import * as $index from "./routes/index.tsx";
-
+import * as $AboutIsland from "./islands/AboutIsland.tsx";
+import * as $FooterIsland from "./islands/FooterIsland.tsx";
+import * as $HomeIsland from "./islands/HomeIsland.tsx";
+import * as $JoinForm from "./islands/JoinForm.tsx";
+import * as $NavIsland from "./islands/NavIsland.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -20,7 +24,13 @@ const manifest = {
     "./routes/contact.tsx": $contact,
     "./routes/index.tsx": $index,
   },
-  islands: {},
+  islands: {
+    "./islands/AboutIsland.tsx": $AboutIsland,
+    "./islands/FooterIsland.tsx": $FooterIsland,
+    "./islands/HomeIsland.tsx": $HomeIsland,
+    "./islands/JoinForm.tsx": $JoinForm,
+    "./islands/NavIsland.tsx": $NavIsland,
+  },
   baseUrl: import.meta.url,
 } satisfies Manifest;
 
