@@ -5,7 +5,7 @@ export function HomeIsland() {
 	const [showMore, setShowMore] = useState(false);
 
 	return (
-		<div class='text-center mt-8'>
+		<div class='text-center mt-11'>
 			<Button
 				onClick={() => setShowMore(!showMore)}
 				class='bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out'

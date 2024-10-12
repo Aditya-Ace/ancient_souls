@@ -40,7 +40,7 @@ export default function JoinForm(props: JoinFormProps) {
 	};
 
 	return (
-		<Card class={props.additionalClasses}>
+		<Card class={`${props.additionalClasses} mt-14`}>
 			<h2 class='text-2xl font-bold mb-6 text-center'>Join Ancient Souls</h2>
 			<form onSubmit={handleSubmit} class='space-y-4'>
 				<Input

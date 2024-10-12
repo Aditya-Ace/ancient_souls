@@ -12,7 +12,7 @@ export default function AboutIsland() {
 	};
 
 	return (
-		<Card class='mt-7'>
+		<Card class='mt-11'>
 			<p class='text-gray-600 mb-6 text-lg'>
 				Ancient Souls is a passionate community of gamers dedicated to sharing
 				and discovering the best gaming experiences across all platforms.

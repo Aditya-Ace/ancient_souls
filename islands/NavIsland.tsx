@@ -21,7 +21,9 @@ export function NavIsland() {
 	return (
 		<header
 			class={`fixed w-full z-50 transition-all duration-300 ${
-				isScrolled ? 'bg-white shadow' : 'bg-transparent'
+				isScrolled
+					? 'bg-white shadow backdrop-filter backdrop-blur-lg bg-opacity-80'
+					: 'bg-transparent'
 			}`}
 		>
 			<nav
@@ -33,14 +35,14 @@ export function NavIsland() {
 					<div class='flex items-center'>
 						<a
 							href='/'
-							class={`text-2xl font-bold transition-all duration-300 ${
+							class={`text-2xl font-bold transition-all duration-300 hover:scale-105 ${
 								isScrolled ? 'text-gray-800' : 'text-white'
 							}`}
 						>
 							Ancient Souls
 						</a>
 					</div>
-					<div class='hidden md:flex items-center space-x-4'>
+					<div class='hidden md:flex items-center space-x-6'>
 						<NavLink href='/' isScrolled={isScrolled}>
 							Home
 						</NavLink>
@@ -58,10 +60,10 @@ export function NavIsland() {
 						</NavLink>
 						<LinkButton
 							href='/join'
-							class={`ml-4 transition-all duration-300 ${
+							class={`ml-4 transition-all duration-300 hover:scale-105 ${
 								isScrolled
 									? 'bg-blue-500 hover:bg-blue-600 text-white'
-									: 'bg-grey-500 hover:bg-gray-100 text-blue-500'
+									: 'bg-white hover:bg-gray-100 text-blue-500'
 							}`}
 						>
 							Join Now
@@ -70,7 +72,7 @@ export function NavIsland() {
 					<div class='md:hidden'>
 						<button
 							onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-							class={`text-3xl focus:outline-none transition-colors duration-300 ${
+							class={`text-3xl focus:outline-none transition-colors duration-300 hover:scale-110 ${
 								isScrolled ? 'text-gray-800' : 'text-white'
 							}`}
 							aria-label='Toggle mobile menu'
@@ -83,7 +85,7 @@ export function NavIsland() {
 			{/* Mobile menu */}
 			<div
 				class={`md:hidden bg-white overflow-hidden transition-all duration-300 ease-in-out ${
-					isMobileMenuOpen ? 'max-h-screen' : 'max-h-0'
+					isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
 				}`}
 			>
 				<div class='px-4 py-2 space-y-2'>
@@ -102,12 +104,12 @@ export function NavIsland() {
 					<NavLink href='/contact' isMobile>
 						Contact
 					</NavLink>
-					<Button
-						onClick={() => alert('Join functionality to be implemented')}
-						class='w-full bg-blue-500 hover:bg-blue-600 text-white'
+					<LinkButton
+						href='/join'
+						class='w-full bg-blue-500 hover:bg-blue-600 text-white transition-all duration-300 hover:scale-105'
 					>
 						Join Now
-					</Button>
+					</LinkButton>
 				</div>
 			</div>
 		</header>
@@ -129,13 +131,14 @@ function NavLink(
 			class={`
         ${isActive ? 'font-bold' : 'font-medium'}
         ${isMobile ? 'block py-2' : 'inline-block'}
-        transition-all duration-300 ease-in-out
+        transition-all duration-300 ease-in-out hover:scale-105
         ${
 					isScrolled || isMobile
 						? 'text-gray-800 hover:text-blue-600'
 						: 'text-white hover:text-gray-200'
 				}
         ${isMobile ? 'text-lg' : ''}
+        ${isActive ? 'border-b-2 border-blue-500' : ''}
         ${className ?? ''}
       `}
 			{...rest}
