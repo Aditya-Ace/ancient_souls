@@ -13,32 +13,47 @@ export default function Home() {
 				/>
 			</Head>
 			<div class='text-white bg-gradient-to-b from-gray-900 to-black min-h-screen'>
-				<section class='relative overflow-hidden'>
+				<section class='relative h-screen overflow-hidden'>
 					<div class='absolute inset-0 bg-black opacity-70 z-10'></div>
 					<div
-						class='absolute inset-0 bg-cover bg-center z-0'
+						class='absolute inset-0 bg-cover bg-center z-0 transform scale-105 animate-slow-zoom'
 						style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80');"
 					></div>
-					<div class='container mx-auto px-6 py-32 relative z-20'>
-						<div class='flex flex-col items-center text-center'>
-							<h1 class='text-4xl md:text-6xl font-bold mb-4 animate-fade-in-down'>
-								Discover Your Next Favorite Game
+					<div class='absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-gray-900 z-20'></div>
+					<div class='container mx-auto px-6 h-full flex items-center relative z-30'>
+						<div class='max-w-3xl mx-auto text-center'>
+							<h1 class='text-5xl md:text-7xl font-bold mb-6 animate-fade-in-down'>
+								Discover Your Next
+								<span class='bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600'>
+									Favorite Game
+								</span>
 							</h1>
-							<p class='text-xl mb-8 animate-fade-in-up'>
+							<p class='text-xl md:text-2xl mb-10 animate-fade-in-up'>
 								Join Ancient Souls and share your game recommendations with a
 								community of passionate gamers.
 							</p>
-							<HomeIsland />
+							<div class='animate-fade-in'>
+								<HomeIsland />
+							</div>
 						</div>
+					</div>
+					<div class='absolute bottom-0 left-0 right-0 z-30'>
+						<svg
+							class='w-full h-24 fill-current text-gray-900'
+							viewBox='0 0 100 100'
+							preserveAspectRatio='none'
+						>
+							<path d='M0 100 C 20 0 50 0 100 100 Z'></path>
+						</svg>
 					</div>
 				</section>
 
-				<section class='py-16 bg-gray-800'>
+				<section class='py-20 bg-gray-900'>
 					<div class='container mx-auto px-6'>
-						<h2 class='text-3xl font-bold text-center text-white mb-12 animate-fade-in-up'>
+						<h2 class='text-4xl font-bold text-center text-white mb-16 animate-fade-in-up'>
 							Platforms We Cover
 						</h2>
-						<div class='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 justify-items-center'>
+						<div class='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 justify-items-center'>
 							<PlatformCard icon={<SteamIcon />} name='PC' />
 							<PlatformCard icon={<PlayStationIcon />} name='PlayStation' />
 							<PlatformCard icon={<XboxIcon />} name='Xbox' />
@@ -52,12 +67,12 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section class='py-16 bg-gray-900'>
+				<section class='py-20 bg-gray-800'>
 					<div class='container mx-auto px-6'>
-						<h2 class='text-3xl font-bold text-center text-white mb-12 animate-fade-in-up'>
+						<h2 class='text-4xl font-bold text-center text-white mb-16 animate-fade-in-up'>
 							How It Works
 						</h2>
-						<div class='grid md:grid-cols-3 gap-8'>
+						<div class='grid md:grid-cols-3 gap-12'>
 							<FeatureCard
 								title='Share Recommendations'
 								description='Recommend your favorite games and tell others why you love them.'
@@ -77,77 +92,94 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section class='py-16 bg-gray-800'>
+				<section class='py-20 bg-gray-900'>
 					<div class='container mx-auto px-6'>
-						<div class='flex flex-col lg:flex-row items-center justify-between gap-12'>
+						<div class='flex flex-col lg:flex-row items-center justify-between gap-16'>
 							<div class='lg:w-1/2'>
-								<h2 class='text-3xl font-bold text-white mb-6 animate-fade-in-up'>
+								<h2 class='text-4xl font-bold text-white mb-8 animate-fade-in-up'>
 									Experience Next-Gen Gaming
 								</h2>
-								<p class='text-xl text-gray-300 mb-8'>
+								<p class='text-xl text-gray-300 mb-10'>
 									Immerse yourself in the world of cutting-edge gaming
 									technology. From high-performance PCs to the latest consoles,
 									Ancient Souls covers it all. Stay updated with the newest
 									releases and experience games like never before.
 								</p>
-								<ul class='list-disc list-inside text-gray-300 space-y-2 mb-8'>
-									<li>4K Ultra HD graphics</li>
-									<li>Ray tracing technology</li>
-									<li>High refresh rate displays</li>
-									<li>Advanced haptic feedback</li>
+								<ul class='list-disc list-inside text-gray-300 space-y-4 mb-10'>
+									<li class='flex items-center'>
+										<span class='text-blue-400 mr-2'>&#9733;</span>
+										4K Ultra HD graphics
+									</li>
+									<li class='flex items-center'>
+										<span class='text-blue-400 mr-2'>&#9733;</span>
+										Ray tracing technology
+									</li>
+									<li class='flex items-center'>
+										<span class='text-blue-400 mr-2'>&#9733;</span>
+										High refresh rate displays
+									</li>
+									<li class='flex items-center'>
+										<span class='text-blue-400 mr-2'>&#9733;</span>
+										Advanced haptic feedback
+									</li>
 								</ul>
-								<button class='bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105'>
+								<button class='bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg'>
 									Explore Latest Tech
 								</button>
 							</div>
 							<div class='lg:w-1/2'>
-								<img
-									src='https://images.unsplash.com/photo-1593305841991-05c297ba4575?q=80&w=1957&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-									alt='Gaming Setup with Controllers'
-									class='w-full h-auto rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300'
-								/>
+								<div class='relative'>
+									<img
+										src='https://images.unsplash.com/photo-1593305841991-05c297ba4575?q=80&w=1957&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+										alt='Gaming Setup with Controllers'
+										class='w-full h-auto rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300'
+									/>
+									<div class='absolute inset-0 bg-gradient-to-tr from-blue-600/50 to-purple-600/50 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg'></div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<section class='py-16 bg-gray-900 relative overflow-hidden'>
+				<section class='py-20 bg-gray-800 relative overflow-hidden'>
 					<div class='container mx-auto px-6 relative z-10'>
-						<h2 class='text-3xl font-bold text-center text-white mb-12 animate-fade-in-up'>
+						<h2 class='text-4xl font-bold text-center text-white mb-16 animate-fade-in-up'>
 							Join Our Community
 						</h2>
-						<div class='grid md:grid-cols-2 gap-12 items-center'>
-							<div class='space-y-6'>
+						<div class='grid md:grid-cols-2 gap-16 items-center'>
+							<div class='space-y-8'>
 								<p class='text-xl text-gray-300'>
 									Connect with fellow gamers, share your experiences, and
 									discover new worlds together. Ancient Souls is more than just
 									a platform - it's a thriving community of passionate gamers.
 								</p>
-								<ul class='space-y-4'>
+								<ul class='space-y-6'>
 									{[
 										'Create your gaming profile',
 										'Build and share your game library',
 										'Participate in discussions and forums',
 										'Earn badges and level up your profile'
 									].map((item, index) => (
-										<li key={index} class='flex items-center space-x-3'>
+										<li key={index} class='flex items-center space-x-4'>
 											<svg
-												class='flex-shrink-0 w-5 h-5 text-green-500'
-												fill='currentColor'
-												viewBox='0 0 20 20'
+												class='flex-shrink-0 w-6 h-6 text-green-500'
+												fill='none'
+												stroke='currentColor'
+												viewBox='0 0 24 24'
 												xmlns='http://www.w3.org/2000/svg'
 											>
 												<path
-													fill-rule='evenodd'
-													d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-													clip-rule='evenodd'
+													stroke-linecap='round'
+													stroke-linejoin='round'
+													stroke-width='2'
+													d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
 												></path>
 											</svg>
-											<span class='text-gray-300'>{item}</span>
+											<span class='text-gray-300 text-lg'>{item}</span>
 										</li>
 									))}
 								</ul>
-								<button class='mt-6 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105'>
+								<button class='mt-8 bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg'>
 									Join the Community
 								</button>
 							</div>
@@ -157,7 +189,7 @@ export default function Home() {
 									alt='Gaming Community'
 									class='w-full h-auto rounded-lg shadow-2xl'
 								/>
-								<div class='absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60 rounded-lg'></div>
+								<div class='absolute inset-0 bg-gradient-to-tr from-green-600/50 to-blue-600/50 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg'></div>
 							</div>
 						</div>
 					</div>
@@ -171,10 +203,10 @@ export default function Home() {
 function PlatformCard({ icon, name }: { icon: JSX.Element; name: string }) {
 	return (
 		<div class='flex flex-col items-center group'>
-			<div class='bg-gray-700 rounded-full p-6 mb-4 transform transition-transform duration-300 group-hover:scale-110 group-hover:bg-blue-600'>
+			<div class='bg-gray-800 rounded-full p-8 mb-4 transform transition-all duration-300 group-hover:scale-110 group-hover:bg-blue-600 group-hover:shadow-lg'>
 				{icon}
 			</div>
-			<span class='text-white font-medium group-hover:text-blue-400 transition-colors duration-300'>
+			<span class='text-lg font-medium group-hover:text-blue-400 transition-colors duration-300'>
 				{name}
 			</span>
 		</div>
@@ -191,10 +223,10 @@ function FeatureCard({
 	icon: JSX.Element;
 }) {
 	return (
-		<div class='bg-gray-800 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:bg-gray-700'>
-			<div class='text-blue-400 mb-4'>{icon}</div>
-			<h3 class='text-xl font-bold text-white mb-2'>{title}</h3>
-			<p class='text-gray-300'>{description}</p>
+		<div class='bg-gray-700 rounded-lg shadow-md p-8 transform transition-all duration-300 hover:scale-105 hover:bg-gray-600 hover:shadow-xl'>
+			<div class='text-blue-400 mb-6'>{icon}</div>
+			<h3 class='text-2xl font-bold text-white mb-4'>{title}</h3>
+			<p class='text-gray-300 text-lg'>{description}</p>
 		</div>
 	);
 }
