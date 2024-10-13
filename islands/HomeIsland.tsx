@@ -20,10 +20,9 @@ export default function HomeIsland() {
 					{showMore ? 'Show Less' : 'Learn More'}
 				</Button>
 			</div>
-
 			<div
 				className={`mt-6 overflow-hidden transition-all duration-300 ease-in-out ${
-					showMore ? 'max-h-96' : 'max-h-0'
+					showMore ? 'max-h-full' : 'max-h-0'
 				}`}
 			>
 				<div className='bg-gray-800 p-6 rounded-lg shadow-lg text-left max-w-xl mx-auto border border-purple-500'>
@@ -41,7 +40,6 @@ export default function HomeIsland() {
 					</div>
 				</div>
 			</div>
-
 			{showArrow && (
 				<div className='absolute left-1/2 transform -translate-x-1/2 mt-8 w-8 h-8'>
 					<svg
