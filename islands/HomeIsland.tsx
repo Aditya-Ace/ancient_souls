@@ -11,8 +11,8 @@ export default function HomeIsland() {
 	};
 
 	return (
-		<div class='text-center relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-			<div class='relative inline-block'>
+		<div class='text-center relative z-30 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+			<div class='relative inline-block mb-8'>
 				<Button
 					onClick={handleTransition}
 					class='bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 ease-in-out hover:shadow-lg animate-pulse'
@@ -20,7 +20,7 @@ export default function HomeIsland() {
 					{showMore ? 'Show Less' : 'Learn More'}
 				</Button>
 				{showArrow && (
-					<div class='absolute left-16 transform -translate-x-1/2 mt-8 w-8 h-8 transition-all duration-300 ease-in-out animate-bounce'>
+					<div class='absolute left-[40%] transform -translate-x-1/2 mt-8 w-8 h-8 transition-all duration-300 ease-in-out animate-bounce'>
 						<svg
 							class='w-full h-full text-purple-500'
 							fill='none'
@@ -36,7 +36,7 @@ export default function HomeIsland() {
 				)}
 			</div>
 			<div
-				class={`mt-16 overflow-hidden transition-all duration-500 ease-in-out ${
+				class={`overflow-hidden transition-all duration-500 ease-in-out ${
 					showMore ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
 				}`}
 			>

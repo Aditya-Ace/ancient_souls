@@ -13,31 +13,31 @@ export default function Home() {
 				/>
 			</Head>
 			<div class='text-white bg-gradient-to-b from-gray-900 to-black min-h-screen'>
-				<section class='relative h-screen overflow-hidden'>
+				<section class='relative min-h-screen overflow-hidden pt-20 pb-32'>
 					<div class='absolute inset-0 bg-black opacity-70 z-10'></div>
 					<div
 						class='absolute inset-0 bg-cover bg-center z-0 transform scale-105 animate-slow-zoom'
 						style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80');"
 					></div>
 					<div class='absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-gray-900 z-20'></div>
-					<div class='container mx-auto px-6 h-full flex items-center relative z-30'>
-						<div class='max-w-3xl mx-auto text-center'>
-							<h1 class='text-5xl md:text-7xl font-bold mb-6 animate-fade-in-down'>
+					<div class='container mx-auto px-6 h-full flex flex-col justify-center items-center relative z-30'>
+						<div class='max-w-3xl mx-auto text-center mb-8'>
+							<h1 class='text-4xl sm:text-5xl md:text-7xl font-bold mb-6 animate-fade-in-down'>
 								Discover Your Next
 								<span class='bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600'>
-									Favorite Game
+									{' Favorite Game'}
 								</span>
 							</h1>
-							<p class='text-xl md:text-2xl mb-10 animate-fade-in-up'>
+							<p class='text-lg sm:text-xl md:text-2xl mb-10 animate-fade-in-up'>
 								Join Ancient Souls and share your game recommendations with a
 								community of passionate gamers.
 							</p>
-							<div class='animate-fade-in'>
-								<HomeIsland />
-							</div>
+						</div>
+						<div class='w-full animate-fade-in'>
+							<HomeIsland />
 						</div>
 					</div>
-					<div class='absolute bottom-0 left-0 right-0 z-30'>
+					<div class='absolute bottom-0 left-0 right-0 z-25'>
 						<svg
 							class='w-full h-24 fill-current text-gray-900'
 							viewBox='0 0 100 100'
@@ -282,7 +282,7 @@ function RateIcon() {
 				stroke-linecap='round'
 				stroke-linejoin='round'
 				stroke-width='2'
-				d='M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z'
+				d='M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976  2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z'
 			/>
 		</svg>
 	);
