@@ -5,26 +5,28 @@
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $_layout from "./routes/_layout.tsx";
-import * as $about from "./routes/about.tsx";
-import * as $contact from "./routes/contact.tsx";
+import * as $about_index from "./routes/about/index.tsx";
+import * as $contact_index from "./routes/contact/index.tsx";
 import * as $index from "./routes/index.tsx";
-import * as $join from "./routes/join.tsx";
+import * as $join_index from "./routes/join/index.tsx";
+import * as $recommendations_index from "./routes/recommendations/index.tsx";
 import * as $AboutIsland from "./islands/AboutIsland.tsx";
 import * as $FooterIsland from "./islands/FooterIsland.tsx";
 import * as $HomeIsland from "./islands/HomeIsland.tsx";
 import * as $JoinForm from "./islands/JoinForm.tsx";
 import * as $NavIsland from "./islands/NavIsland.tsx";
-import { type Manifest } from "$fresh/server.ts";
+import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
     "./routes/_layout.tsx": $_layout,
-    "./routes/about.tsx": $about,
-    "./routes/contact.tsx": $contact,
+    "./routes/about/index.tsx": $about_index,
+    "./routes/contact/index.tsx": $contact_index,
     "./routes/index.tsx": $index,
-    "./routes/join.tsx": $join,
+    "./routes/join/index.tsx": $join_index,
+    "./routes/recommendations/index.tsx": $recommendations_index,
   },
   islands: {
     "./islands/AboutIsland.tsx": $AboutIsland,

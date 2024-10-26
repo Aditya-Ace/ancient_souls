@@ -3,19 +3,7 @@ import { Button } from '../components/ui/Button.tsx';
 import { Input } from '../components/ui/Input.tsx';
 import { Select } from '../components/ui/Select.tsx';
 import { Card } from '../components/ui/Card.tsx';
-
-const gameGenres = [
-	'Action',
-	'Adventure',
-	'RPG',
-	'Strategy',
-	'Simulation',
-	'Sports',
-	'Puzzle',
-	'Shooter',
-	'Fighting',
-	'Horror'
-];
+import { gameGenres } from '../utils/constants.ts';
 
 interface JoinFormProps {
 	additionalClasses?: string;

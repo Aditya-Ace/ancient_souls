@@ -1,0 +1,57 @@
+export type GameGenre =
+	| 'Action'
+	| 'Adventure'
+	| 'Role-Playing' // (RPG)
+	| 'Simulation'
+	| 'Strategy'
+	| 'Sports'
+	| 'Puzzle'
+	| 'Idle'
+	| 'Platformer'
+	| 'Fighting'
+	| 'Racing'
+	| 'Shooter'
+	| 'Stealth'
+	| 'Survival'
+	| 'Horror'
+	| 'Sandbox'
+	| 'Massively Multiplayer Online' // (MMO)
+	| 'Battle Royale'
+	| 'Card'
+	| 'Rhythm'
+	| 'Trivia'
+	| 'Turn-Based Strategy' // (TBS)
+	| 'Real-Time Strategy' // (RTS)
+	| 'Tower Defense'
+	| 'Text-Based'
+	| 'Open World'
+	| 'Metroidvania'
+	| 'Rogue-like'
+	| 'Rogue-lite'
+	| 'Bullet Hell'
+	| 'Interactive Story'
+	| 'Educational'
+	| 'Social Simulation'
+	| 'Music'
+	| 'Party'
+	| 'Visual Novel'
+	| 'Dating Sim'
+	| 'Tactical'
+	| 'Hack and Slash'
+	| 'MMORPG' // (Massively Multiplayer Online RPG)
+	| 'MOBA' // (Multiplayer Online Battle Arena)
+	| 'Puzzle-Platformer'
+	| 'Vehicular Combat'
+	| 'Battle Racing'
+	| 'Beat ‘em up'
+	| 'Tycoon'
+	| 'Board Game'
+	| 'Deckbuilding'
+	| 'Arcade'
+	| 'Survival Horror'
+	| 'Action-Adventure'
+	| 'First-Person Shooter' // (FPS)
+	| 'Third-Person Shooter' // (TPS)
+	| 'Pinball'
+	| 'Dungeon Crawler'
+	| 'Rogue-lite';

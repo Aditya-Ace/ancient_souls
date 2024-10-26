@@ -1,4 +1,4 @@
-import JoinForm from '../islands/JoinForm.tsx';
+import JoinForm from '../../islands/JoinForm.tsx';
 
 export default function Join() {
 	return (
